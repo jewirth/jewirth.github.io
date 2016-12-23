@@ -1,0 +1,13 @@
+# Site settings
+title: snej.de
+email: jw@snej.de
+description: "Jens Wirth's personal homepage."
+baseurl: ""
+url: "http://snej.de"
+twitter_username: jewirth
+github_username:  jewirth
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
