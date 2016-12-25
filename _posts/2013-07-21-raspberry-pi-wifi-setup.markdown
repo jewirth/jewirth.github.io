@@ -2,8 +2,6 @@
 layout: post
 title: "Raspberry Pi: Setting up a Wifi connection without keyboard, mouse and monitor connected"
 date: 2013-07-21 20:00:00 +0200
-comments: true
-categories: ["Admin", "Raspberry Pi"]
 ---
 Unlike Ethernet, which is configured to automatically use DHCP on the RPi (Raspberry Pi) by default, setting up a Wifi connection can be difficult to some users. First of all, the RPi can not and should not guess the name of your Wifi network and it surely can't do so with your Wifi passphrase. I hope you really do not want this.
 
@@ -76,4 +74,3 @@ On success, the RPi should automatically connect to your Wifi network on startup
 
 If you figured out the new IP address you should be able to talk to your RPi as usual (SSH, ping, and so on).
 
-If you have any questions or improvements please feel free to do so. You can use the "Post a comment" feature below. I'll try to answer and update this article where necessary.

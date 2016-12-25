@@ -2,8 +2,6 @@
 layout: post
 title: "oneLineSystemMon: Simple Geeklet that shows cpu, memory, disk and transferred network data"
 date: 2014-04-13 20:00:00 +0200
-comments: true
-categories: ["Admin", "OS X"]
 ---
 When working with Linux you may be used to have a system monitor on your desktop like Conky or its ancestor Torsmo. If you are on OS X then you might like to use GeekTool for this purpose.
 

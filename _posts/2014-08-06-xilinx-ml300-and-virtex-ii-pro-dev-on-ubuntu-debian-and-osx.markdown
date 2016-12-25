@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Xilinx ML300 and Virtex-II Pro Development on Ubuntu Desktop 14.04.1, Debian 7.6 and OS X"
-date: 2014-08-20 12:02:00 +0200
-comments: true
-categories: ["FPGA", "Linux"]
 ---
 
 Recently, I tried to implement a design for the [Xilinx ML300](http://www.xilinx.com/products/boards/ml300/) board which is an approx. 12 years old FPGA development board. It is built around the Virtex-II Pro XC2VP7 FPGA which holds a physical PowerPC 405 processor inside ready to be routed to some logic.

@@ -2,8 +2,6 @@
 layout: post
 title: "Jingle bells playing light-up piano keyboard"
 date: 2012-11-20 20:00:00 +0200
-comments: true
-categories: ["MCU", "Programming", "Tinkering"]
 ---
 
 Christmas time is just around the corner and so is the next tinkering project:
