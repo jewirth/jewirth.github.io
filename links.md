@@ -6,7 +6,23 @@ permalink: /links/
 
 <p style="line-height: 0.8;"><small><i>The links on this website are provided for your convenience and for informational purposes only. I bear no responsibility for the accuracy, legality or content of the external site or for that of subsequent links. The links do not constitute an endorsement by me of information, products, services or opinions of the corporation or organization or individual. Please contact the external site for answers to questions regarding its content. I don't have editorial control over the information you may find at the external sites.</i></small></p>
 
-<div align="center"><a href="#news">news</a> - <a href="#productivity">productivity</a> - <a href="#music">music</a> - <a href="#programming">programming</a> - <a href="#linux">linux</a> - <a href="#electronics">electronics</a> - <a href="#hamradio">ham radio</a> - <a href="#misc">misc</a></div>
+<div align="center">
+	<a href="#funnystuff">funny stuff</a> -
+	<a href="#news">news</a> -
+	<a href="#productivity">productivity</a> -
+	<a href="#music">music</a> -
+	<a href="#programming">programming</a> -
+	<a href="#linux">linux</a> -
+	<a href="#electronics">electronics</a> -
+	<a href="#hamradio">ham radio</a> -
+	<a href="#misc">misc</a>
+</div>
+
+# funny stuff <a name="funnystuff"></a>
+- [Dilbert](http://www.dilbert.com/)
+- [UserFriendly.Org](http://www.userfriendly.org/)
+- [The Awkward Yeti](http://theawkwardyeti.com/)
+- [xkcd](https://xkcd.com/)
 
 # news <a name="news"></a>
 - [Welt der Physik: Startseite](http://www.weltderphysik.de/)
