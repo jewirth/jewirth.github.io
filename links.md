@@ -23,6 +23,7 @@ permalink: /links/
 - [UserFriendly.Org](http://www.userfriendly.org/)
 - [The Awkward Yeti](http://theawkwardyeti.com/)
 - [xkcd](https://xkcd.com/)
+- [The Perry Bible Fellowship](http://pbfcomics.com/)
 
 # news <a name="news"></a>
 - [Welt der Physik: Startseite](http://www.weltderphysik.de/)
