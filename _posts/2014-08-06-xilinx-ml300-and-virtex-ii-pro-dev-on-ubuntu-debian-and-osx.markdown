@@ -28,7 +28,7 @@ Here are the steps:
 
 
 <a name="step1"></a>
-###1. Get the proper version of the design tools
+### 1. Get the proper version of the design tools
 
 The latest release of the Vivado or ISE Design Tools do not support the Virtex-II Pro architecture. So, don't waste time and bandwidth by downloading it. The latest support for the Virtex-II Pro is within the **ISE Design Tools 10.1 Service Pack 3**. You have to download and install ISE 10.1 and the Service Pack 3 separately from xilinx.com. The ISE and EDK tarballs include support for 32- and 64-bit systems. The Service Pack 3 update comes in zip files. Some zips are valid for both architectures and some zips are separately available for 32- and 64-bit. Be sure to get the right ones for your system.
 
@@ -38,7 +38,7 @@ At the download page for ISE 10.1 there is a link named *Obtain a v10.1 Registra
 
 
 <a name="step2"></a>
-###2. Install ISE & EDK
+### 2. Install ISE & EDK
 
 When extracting the downloaded tar files do not extract to a Windows- or a Mac- filesystem. This will destroy the installer consistency. The installer GUI will look garbled and it will tell you that your Registration ID is not valid. This is very very very misleading and annoying. Simply extract the tar and zip files somewhere beneath your home directory, which should be an ext4 filesystem if you are on Ubuntu-14.04.1. Also, don't use spaces in the path where the installers are extracted to. Otherwise you'll get an error message saying your processor platform is not supported.
 
@@ -106,7 +106,7 @@ Finally, change the default shell to bash:
 
 
 <a name="step4"></a>
-###4. Check if ISE works
+### 4. Check if ISE works
 
 Now, let's start ISE from the shell with:
 
@@ -172,7 +172,7 @@ if the process finished and there should be a `top.bit` file in your project dir
 
 
 <a name="step5"></a>
-###5. Check if EDK works
+### 5. Check if EDK works
 
 We start EDK, respectively XPS, from the shell with
 
@@ -197,7 +197,7 @@ Now, the EDK creates a `system.bit` file for the hardware design (similar step a
 
 
 <a name="step6"></a>
-###6. Platform Cable USB
+### 6. Platform Cable USB
 
 To get the Xilinx Platform Cable USB working we need an alternative for the official drivers from Xilinx because they won't work with the current kernel. Luckily, a guy named [Michael Gernoth solved this issue by implementing a library called *libusb-driver*, which emulates the original driver](http://rmdir.de/~michael/xilinx/). As stated on his page, this should work with more cables than just the Platform Cable USB. However, I only have this one available.
 
@@ -240,7 +240,7 @@ respectively:
 
 
 <a name="step7"></a>
-###7. Verify by programming the FPGA
+### 7. Verify by programming the FPGA
 
 To verify all previous steps we will program our FPGA by using the programming files top.bit (generated with ISE) and download.bit (generated with EDK).
 
