@@ -28,7 +28,13 @@ Here are the steps:
 
 
 <a name="step1"></a>
+# this is one hash
+
+## here are two
+
 ### 1. Get the proper version of the design tools
+
+#### now it's four
 
 The latest release of the Vivado or ISE Design Tools do not support the Virtex-II Pro architecture. So, don't waste time and bandwidth by downloading it. The latest support for the Virtex-II Pro is within the **ISE Design Tools 10.1 Service Pack 3**. You have to download and install ISE 10.1 and the Service Pack 3 separately from xilinx.com. The ISE and EDK tarballs include support for 32- and 64-bit systems. The Service Pack 3 update comes in zip files. Some zips are valid for both architectures and some zips are separately available for 32- and 64-bit. Be sure to get the right ones for your system.
 
