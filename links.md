@@ -89,6 +89,7 @@ permalink: /links/
 - [Lightning & Thunderstorms - World Map](http://en.blitzortung.org/live_lightning_maps.php)
 - [80-30m Mag Loop](https://www.nonstopsystems.com/radio/frank_radio_antenna_magloop.htm)
 - [Fundamentals of the MiniWhip antenna](http://www.pa3fwm.nl/technotes/tn07.html)
+- [Baofeng UV5R modulation improvement mod](http://remco.org/index.php/2013/01/05/baofeng-uv5r-modulation-improvement-mod/)
 
 # misc <a name="misc"></a>
 - [TinyPNG – Compress PNG images while preserving transparency](https://tinypng.com/)
