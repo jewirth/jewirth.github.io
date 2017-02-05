@@ -10,3 +10,4 @@ Stuff I'm planning to add next:
 - eRubberduck / random review questions
 - interesting LT Spice simulations / configuration for better FFT results
 - gnuradio-companion (AM/FM receiver, ADS-B, protocol decoder, integrate wireshark?)
+- interesting Q&A (like Jens' coffee & spoon phenomenom)
