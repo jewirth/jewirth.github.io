@@ -6,30 +6,32 @@ permalink: /syntax/
 
 It's the place where I write down somewhat useful syntax snippets. Instead of keeping my local copy I decided to make it public. Maybe it's helpful for someone. Most probably that will be myself when I'm not near the local copy.
 
-[1  Bash stuff](#Bash-stuff)<br>
-  1.1  source and export<br>
-  1.2  arguments<br>
-  1.3  redirections and piping<br>
-  1.4  conditional expressions<br>
-  1.5  Loops<br>
-  1.6  Using functions in bash<br>
-  1.7  Some quite useful command syntax<br>
+1 <a href="#1">Bash stuff<a>
+  1.1 <a href="#11">source and export<a>
+  1.2 <a href="#12">arguments<a>
+  1.3 <a href="#13">redirections and piping<a>
+  1.4 <a href="#14">conditional expressions<a>
+  1.5 <a href="#15">Loops<a>
+  1.6 <a href="#16">Using functions in bash<a>
+  1.7 <a href="#17">Some quite useful command syntax<a>
 <br>
-2  Miscellanous<br>
-  2.1  Matlab: Manually plot connected dots<br>
-  2.2  OS X: bash script toggling visibility of hidden files in Finder<br>
-  2.3  OS X: bash script toggling the OS X dashboard<br>
-  2.4  Editing DNS Records<br>
-  2.5  Raspberry Pi Camera code snippets<br>
-    2.5.1  take photos<br>
-    2.5.2  rename photos<br>
-    2.5.3  create video from photos<br>
+2 <a href="#2">Miscellanous<br>
+  2.1 <a href="#21">Matlab: Manually plot connected dots<br>
+  2.2 <a href="#22">OS X: bash script toggling visibility of hidden files in Finder<br>
+  2.3 <a href="#23">OS X: bash script toggling the OS X dashboard<br>
+  2.4 <a href="#24">Editing DNS Records<br>
+  2.5 <a href="#25">Raspberry Pi Camera code snippets<br>
+    2.5.1 <a href="#251">take photos<br>
+    2.5.2 <a href="#252">rename photos<br>
+    2.5.3 <a href="#253">create video from photos<br>
 <br>
-3 [Syntax mess](#Syntax-mess)<br>
+3 <a href="#3">Syntax mess</a>
 
-
+<a name="1"></a>
 
 # Bash stuff
+
+<a name="11"></a>
 
 ## source and export
 
@@ -56,6 +58,8 @@ Source and export are fundamental when you need to use other scripts or to be su
 
     unset FOO
 
+<a name="12"></a>
+
 ## arguments
 
 The snippets below show how to use arguments inside a script:
@@ -70,6 +74,8 @@ The snippets below show how to use arguments inside a script:
     echo  "each argument in quotes :"  "$@"
     echo  "last return value       :"  $?
 
+<a name="13"></a>
+
 ## redirections and piping
 
 The snippets below show how to use redirections and piping:
@@ -83,6 +89,8 @@ The snippets below show how to use redirections and piping:
     make 2>&1 | tee log.txt         # redirect std error to standard output, then pipe to tee
     make 2>error.txt | hexdump -C   # pipe std output but redirect error to file
     hexdump -C < log.txt            # redirect std input
+
+<a name="14"></a>
 
 ## conditional expressions
 
@@ -161,6 +169,8 @@ The snippets below show how to use redirections and piping:
     *) echo "DO NOTHING";;
     esac
 
+<a name="15"></a>
+
 ## Loops
 
     #!/bin/bash
@@ -221,7 +231,8 @@ The snippets below show how to use redirections and piping:
       echo -n "enter val (must be 3) > "
       read val
     done
-
+    
+<a name="16"></a>
 
 ## Using functions in bash:
 
@@ -243,6 +254,8 @@ The snippets below show how to use redirections and piping:
     foo 100 5 200
     bar 100 5 200
 
+<a name="17"></a>
+
 ## Some quite useful command syntax
 
     # show third field of each line in test.txt with delimiter '#'
@@ -259,9 +272,11 @@ The snippets below show how to use redirections and piping:
     # same as above plus overwrite file with result and store backup with extension ".backup"
     sed -i .backup s/auss/inn/g test.txt
 
-
+<a name="2"></a>
 
 # Miscellanous
+
+<a name="21"></a>
 
 ## Matlab: Manually plot connected dots
 
@@ -292,6 +307,8 @@ draw connected points with Matlab
 
     hold off
 
+<a name="22"></a>
+
 ## OS X: bash script toggling visibility of hidden files in Finder
 
 toggle hidden files visibility in OS X Finder
@@ -307,6 +324,8 @@ toggle hidden files visibility in OS X Finder
             echo "Give me parameter ON or OFF"
         fi
     fi
+
+<a name="23"></a>
 
 ## OS X: bash script toggling the OS X dashboard
 
@@ -324,6 +343,7 @@ kill or enable the OS X dashboard
         fi
     fi
 
+<a name="24"></a>
 
 ## Editing DNS Records
 
@@ -343,7 +363,11 @@ kill or enable the OS X dashboard
     *.website.com     CNAME   website.com
     pi.snej.de        CNAME   snej.mygreatdnsservice.com
 
+<a name="25"></a>
+
 ## Raspberry Pi Camera code snippets
+
+<a name="251"></a>
 
 ### take photos
 
@@ -361,14 +385,19 @@ kill or enable the OS X dashboard
         sleep 6
     done
 
+<a name="252"></a>
+
 ### rename photos
     for file in *.JPG ; do mv "${file}" "${file%.JPG}_suffix.JPG";  done
     i=1;
     for file in cam_*.JPG ; do mv -v "${file}" "$i.jpeg"; i=$[i+1]; done
 
+<a name="253"></a>
+
 ### create video from photos
     ~/bin/ffmpeg -r 20 -i %d.jpeg /Users/jens/Desktop/vid.mp4
 
+<a name="3"></a>
 
 # Syntax-mess
 
