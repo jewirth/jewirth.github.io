@@ -8,28 +8,28 @@ It's the place where I write down somewhat useful syntax snippets. Instead of ke
 
 Hall of Syntax:
 
-1. <a href="#1">Bash stuff</a>
+1. <a href="#1">bash stuff</a>
  - <a href="#11">source and export</a>
  - <a href="#12">arguments</a>
  - <a href="#13">redirections and piping</a>
  - <a href="#14">conditional expressions</a>
- - <a href="#15">Loops</a>
- - <a href="#16">Using functions in bash</a>
- - <a href="#17">Some quite useful command syntax</a>
-2. <a href="#2">Miscellanous</a>
+ - <a href="#15">loops</a>
+ - <a href="#16">using functions in bash</a>
+ - <a href="#17">some quite useful command syntax</a>
+2. <a href="#2">miscellanous</a>
  - <a href="#21">Matlab: Manually plot connected dots</a>
  - <a href="#22">OS X: bash script toggling visibility of hidden files in Finder</a>
  - <a href="#23">OS X: bash script toggling the OS X dashboard</a>
- - <a href="#24">Editing DNS Records</a>
+ - <a href="#24">editing DNS Records</a>
  - <a href="#25">Raspberry Pi Camera code snippets</a>
   - <a href="#251">take photos</a>
   - <a href="#252">rename photos</a>
   - <a href="#253">create video from photos</a>
-3. <a href="#3">Syntax mess</a>
+3. <a href="#3">syntax mess</a>
 
 <a name="1"></a>
 
-# Bash stuff
+# bash stuff
 
 <a name="11"></a>
 
@@ -171,7 +171,7 @@ The snippets below show how to use redirections and piping:
 
 <a name="15"></a>
 
-## Loops
+## loops
 
     #!/bin/bash
 
@@ -234,7 +234,7 @@ The snippets below show how to use redirections and piping:
     
 <a name="16"></a>
 
-## Using functions in bash:
+## using functions in bash:
 
     #!/bin/bash
 
@@ -256,7 +256,7 @@ The snippets below show how to use redirections and piping:
 
 <a name="17"></a>
 
-## Some quite useful command syntax
+## some quite useful command syntax
 
     # show third field of each line in test.txt with delimiter '#'
     cut -d# -f3 test.txt
@@ -274,7 +274,7 @@ The snippets below show how to use redirections and piping:
 
 <a name="2"></a>
 
-# Miscellanous
+# miscellanous
 
 <a name="21"></a>
 
@@ -345,7 +345,7 @@ kill or enable the OS X dashboard
 
 <a name="24"></a>
 
-## Editing DNS Records
+## editing DNS Records
 
     General Syntax: [DOMAIN/SUBDOMAIN] [TYPE] [VALUE]
 
@@ -399,7 +399,7 @@ kill or enable the OS X dashboard
 
 <a name="3"></a>
 
-# Syntax-mess
+# syntax mess
 
 Here you'll see a mess of syntax snippets that I found useful at some point in my life. Since this category is called 'mess' there is no particular order or useful description. Continue reading at your own risk!
 
