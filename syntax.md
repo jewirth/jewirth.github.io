@@ -6,26 +6,26 @@ permalink: /syntax/
 
 It's the place where I write down somewhat useful syntax snippets. Instead of keeping my local copy I decided to make it public. Maybe it's helpful for someone. Most probably that will be myself when I'm not near the local copy.
 
-[1  Bash stuff](#Bash-stuff)
-  1.1  source and export
-  1.2  arguments
-  1.3  redirections and piping
-  1.4  conditional expressions
-  1.5  Loops
-  1.6  Using functions in bash:
-  1.7  Some quite useful command syntax
-
-2  Miscellanous
-  2.1  Matlab: Manually plot connected dots
-  2.2  OS X: bash script toggling visibility of hidden files in Finder
-  2.3  OS X: bash script toggling the OS X dashboard
-  2.4  Editing DNS Records
-  2.5  Raspberry Pi Camera code snippets
-    2.5.1  take photos
-    2.5.2  rename photos
-    2.5.3  create video from photos
-
-3  Syntax mess
+[1  Bash stuff](#Bash-stuff)<br>
+  1.1  source and export<br>
+  1.2  arguments<br>
+  1.3  redirections and piping<br>
+  1.4  conditional expressions<br>
+  1.5  Loops<br>
+  1.6  Using functions in bash<br>
+  1.7  Some quite useful command syntax<br>
+<br>
+2  Miscellanous<br>
+  2.1  Matlab: Manually plot connected dots<br>
+  2.2  OS X: bash script toggling visibility of hidden files in Finder<br>
+  2.3  OS X: bash script toggling the OS X dashboard<br>
+  2.4  Editing DNS Records<br>
+  2.5  Raspberry Pi Camera code snippets<br>
+    2.5.1  take photos<br>
+    2.5.2  rename photos<br>
+    2.5.3  create video from photos<br>
+<br>
+3 [Syntax mess](#Syntax-mess)<br>
 
 
 
