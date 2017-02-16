@@ -6,7 +6,7 @@ permalink: /syntax/
 
 It's the place where I write down somewhat useful syntax snippets. Instead of keeping my local copy I decided to make it public. Maybe it's helpful for someone. Most probably that will be myself when I'm not near the local copy.
 
-[1  Bash stuff](#Bash_stuff)
+[1  Bash stuff](#Bash-stuff)
   1.1  source and export
   1.2  arguments
   1.3  redirections and piping
