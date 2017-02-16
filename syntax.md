@@ -6,26 +6,26 @@ permalink: /syntax/
 
 It's the place where I write down somewhat useful syntax snippets. Instead of keeping my local copy I decided to make it public. Maybe it's helpful for someone. Most probably that will be myself when I'm not near the local copy.
 
-1 <a href="#1">Bash stuff<a>
-  1.1 <a href="#11">source and export<a>
-  1.2 <a href="#12">arguments<a>
-  1.3 <a href="#13">redirections and piping<a>
-  1.4 <a href="#14">conditional expressions<a>
-  1.5 <a href="#15">Loops<a>
-  1.6 <a href="#16">Using functions in bash<a>
-  1.7 <a href="#17">Some quite useful command syntax<a>
-<br>
-2 <a href="#2">Miscellanous<br>
-  2.1 <a href="#21">Matlab: Manually plot connected dots<br>
-  2.2 <a href="#22">OS X: bash script toggling visibility of hidden files in Finder<br>
-  2.3 <a href="#23">OS X: bash script toggling the OS X dashboard<br>
-  2.4 <a href="#24">Editing DNS Records<br>
-  2.5 <a href="#25">Raspberry Pi Camera code snippets<br>
-    2.5.1 <a href="#251">take photos<br>
-    2.5.2 <a href="#252">rename photos<br>
-    2.5.3 <a href="#253">create video from photos<br>
-<br>
-3 <a href="#3">Syntax mess</a>
+Hall of Syntax:
+
+1. <a href="#1">Bash stuff</a>
+ - <a href="#11">source and export</a>
+ - <a href="#12">arguments</a>
+ - <a href="#13">redirections and piping</a>
+ - <a href="#14">conditional expressions</a>
+ - <a href="#15">Loops</a>
+ - <a href="#16">Using functions in bash</a>
+ - <a href="#17">Some quite useful command syntax</a>
+2. <a href="#2">Miscellanous</a>
+ - <a href="#21">Matlab: Manually plot connected dots</a>
+ - <a href="#22">OS X: bash script toggling visibility of hidden files in Finder</a>
+ - <a href="#23">OS X: bash script toggling the OS X dashboard</a>
+ - <a href="#24">Editing DNS Records</a>
+ - <a href="#25">Raspberry Pi Camera code snippets</a>
+  - <a href="#251">take photos</a>
+  - <a href="#252">rename photos</a>
+  - <a href="#253">create video from photos</a>
+3. <a href="#3">Syntax mess</a>
 
 <a name="1"></a>
 
