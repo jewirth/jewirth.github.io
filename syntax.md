@@ -370,7 +370,7 @@ kill or enable the OS X dashboard
     ~/bin/ffmpeg -r 20 -i %d.jpeg /Users/jens/Desktop/vid.mp4
 
 
-# Syntax mess
+# Syntax-mess
 
 Here you'll see a mess of syntax snippets that I found useful at some point in my life. Since this category is called 'mess' there is no particular order or useful description. Continue reading at your own risk!
 
