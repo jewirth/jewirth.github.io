@@ -12,3 +12,4 @@ Stuff I'm planning to add next:
 - gnuradio-companion (AM/FM receiver, ADS-B, protocol decoder, integrate wireshark?)
 - Building a portable HB9CV-antenna for 2m (or duoband?)
 - interesting Q&A (like Jens' coffee & spoon phenomenom)
+- creating images from binary data
