@@ -806,4 +806,47 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     else
     echo “Usage : getpics START END DELAY”
     fi
+    
+    duck -e overwrite --password mylittlepony --upload sftp://ponyguy@server.com/path aLocalDir
+    
+    # you may add --user foo --password bar
+    wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --domains snej.de \
+     --no-parent \
+    http://snej.de/
+    
+    sed -i.bak 's/OLDSTRING/NEWSTRING/g' *.cpp
+    
+    echo "A;B:C,D.E" | awk -F'[,;.:]' '{print $3}'
+    
+    rsync -ravzh Documents /Volumes/micro128/
+
+    pandoc --number-sections -t html | pandoc -f html -t markdown 
+
+    NRF51 Programming: Target BOOT
+
+    "The book promotes a clean, side-effect-free style of programming for the first eight chapters. Chapter 9 discusses i/o."
+    
+    #disable
+    sudo nvram SystemAudioVolume=%80
+    #enable
+    sudo nvram -d SystemAudioVolume
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    
+    
 
