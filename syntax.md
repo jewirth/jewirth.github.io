@@ -837,24 +837,4 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     sudo nvram SystemAudioVolume=%80
     #enable
     sudo nvram -d SystemAudioVolume
-    
-
-    /* BUILDNUMBER
-        build me with:
-        gcc -std=c99 -D __MYVAR=$((`cat nextbuildnumber.txt`)) foo1.c -o foo1 &&
-        echo $((`cat nextbuildnumber.txt` + 1)) > nextbuildnumber.txt
-    */
-    #include <stdio.h>
-    #include <unistd.h>
-    int main(int argc, char **argv) {
-     printf("!! Hello, World! I'm foo1 (BUILD #%d)\r\n", __MYVAR);
-     for (int i=0; i<4; i++) {
-      sleep(1);
-      printf("*");
-      fflush(0);
-     }
-     printf("\r\n");
-     return 0;
-    }
-
 
