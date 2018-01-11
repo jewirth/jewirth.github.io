@@ -26,6 +26,7 @@ Hall of Syntax:
   - <a href="#252">rename photos</a>
   - <a href="#253">create video from photos</a>
 3. <a href="#3">syntax mess</a>
+4. <a href="#4">git stuff</a>
 
 <a name="1"></a>
 
@@ -499,3 +500,20 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
 
     "The book promotes a clean, side-effect-free style of programming for the first eight chapters. Chapter 9 discusses i/o."
     
+
+<a name="4"></a>
+
+# git stuff
+
+## get updates incl. submodules
+    git fetch --recurse-submodules
+    
+## clone a certain commit
+    git clone $URL
+    cd $PROJECT_NAME
+    git reset --hard $SHA1
+
+## misc
+    git rebase --continue
+    git push --force
+
