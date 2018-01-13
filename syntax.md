@@ -513,6 +513,10 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     cd $PROJECT_NAME
     git reset --hard $SHA1
 
+## undo
+    git reset HEAD~            # undo last commit
+    git reset --soft HEAD~     # undo last commit and keep staged stuff
+    
 ## misc
     git rebase --continue
     git push --force
