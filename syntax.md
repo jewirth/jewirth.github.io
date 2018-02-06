@@ -512,6 +512,7 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     git clone $URL
     cd $PROJECT_NAME
     git reset --hard $SHA1
+    ...or     git checkout $SHA1 --force --recurse-submodules
 
 ## undo
     git reset HEAD~            # undo last commit
