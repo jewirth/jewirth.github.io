@@ -520,3 +520,10 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     git reset --soft HEAD~           # undo last commit and keep staged stuff
     git reset --hard HEAD~N          # undo last commit (and discard changes?)
     git gc --prune=now --aggressive  # force git to run garbage collector
+
+## rebase your branch to latest master on origin
+    git checkout master
+    git pull
+    git checkout aBranch
+    git rebase master
+    git push --force
