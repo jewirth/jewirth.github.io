@@ -515,10 +515,8 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     ...or     git checkout $SHA1 --force --recurse-submodules
 
 ## undo
-    git reset HEAD~            # undo last commit
-    git reset --soft HEAD~     # undo last commit and keep staged stuff
-    
-## misc
-    git rebase --continue
-    git push --force
-
+    git reset HEAD~                  # undo last commit
+    git reset HEAD~N                 # undo last N commits
+    git reset --soft HEAD~           # undo last commit and keep staged stuff
+    git reset --hard HEAD~N          # undo last commit (and discard changes?)
+    git gc --prune=now --aggressive  # force git to run garbage collector
