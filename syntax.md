@@ -523,7 +523,7 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
 
 ## rebase your branch to latest master on origin
     git checkout master
-    git pull
-    git checkout aBranch
+    git pull origin master
+    git checkout -           # goes back to your branch
     git rebase master
     git push --force
