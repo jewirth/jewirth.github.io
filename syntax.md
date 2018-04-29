@@ -399,7 +399,7 @@ kill or enable the OS X dashboard
     ~/bin/ffmpeg -r 20 -i %d.jpeg /Users/jens/Desktop/vid.mp4
     
 ### concat video files
-ffmpeg -v info -f concat -i files.txt  -c copy output.mp4
+    ffmpeg -v info -f concat -i files.txt  -c copy output.mp4
     with files.txt containing:
         file '2017_0515_010105_001.MP4'
         file '2017_0515_011328_002.MP4'
