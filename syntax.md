@@ -404,6 +404,9 @@ kill or enable the OS X dashboard
         file '2017_0515_010105_001.MP4'
         file '2017_0515_011328_002.MP4'
 
+### convert to h264
+    ffmpeg -i input.mp4 -vcodec h264 output.mp4
+
 <a name="3"></a>
 
 # syntax mess
