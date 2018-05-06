@@ -25,6 +25,8 @@ Hall of Syntax:
   - <a href="#251">take photos</a>
   - <a href="#252">rename photos</a>
   - <a href="#253">create video from photos</a>
+  - <a href="#254">concat video files</a>
+  - <a href="#255">convert to h264</a>
 3. <a href="#3">syntax mess</a>
 4. <a href="#4">git stuff</a>
 
@@ -397,12 +399,16 @@ kill or enable the OS X dashboard
 
 ### create video from photos
     ~/bin/ffmpeg -r 20 -i %d.jpeg /Users/jens/Desktop/vid.mp4
-    
+
+<a name="254"></a>
+
 ### concat video files
     ffmpeg -v info -f concat -i files.txt  -c copy output.mp4
     with files.txt containing:
         file '2017_0515_010105_001.MP4'
         file '2017_0515_011328_002.MP4'
+
+<a name="255"></a>
 
 ### convert to h264
     ffmpeg -i input.mp4 -vcodec h264 output.mp4
