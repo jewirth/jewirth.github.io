@@ -27,6 +27,7 @@ Hall of Syntax:
   - <a href="#253">create video from photos</a>
   - <a href="#254">concat video files</a>
   - <a href="#255">convert to h264</a>
+  - <a href="#256">cut video file</a>
 3. <a href="#3">syntax mess</a>
 4. <a href="#4">git stuff</a>
 
@@ -412,6 +413,11 @@ kill or enable the OS X dashboard
 
 ### convert to h264
     ffmpeg -i input.mp4 -vcodec h264 output.mp4
+
+<a name="256"></a>
+
+### cut video file
+    ffmpeg -i input_video.mp4 -ss 00:02:15 -to 00:05:30 -c copy output_video.mp4
 
 <a name="3"></a>
 
