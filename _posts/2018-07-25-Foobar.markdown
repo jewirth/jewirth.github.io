@@ -1,0 +1,6 @@
+---
+layout: post
+title: "Foobar"
+date: 2018-07-25 19:37:00 +0200
+---
+This is a Foobar page.
