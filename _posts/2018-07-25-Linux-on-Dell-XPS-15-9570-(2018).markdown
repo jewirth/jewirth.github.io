@@ -1,0 +1,6 @@
+---
+layout: post
+title: "Linux on Dell XPS 15 9570 (2018)"
+date: 2018-07-25 19:37:00 +0200
+---
+I recently bought a Dell XPS 15 9570 (2018). These are my notes about setting up a Dual Boot System allowing to run Linux Mint and the pre-installed Windows 10 operating system.
