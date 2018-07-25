@@ -521,6 +521,13 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
 
     "The book promotes a clean, side-effect-free style of programming for the first eight chapters. Chapter 9 discusses i/o."
     
+    Boot related settings in nowadays BIOS:
+    - UEFI: Unified Extensible Firmware Interface
+    - Legacy Mode: booting non UEFI supported operating systems
+    - SecureBoot: A protocol defined since UEFI 2.3.1 Errata C specification
+    - IDE / AHCI / Raid
+
+
 
 <a name="4"></a>
 
