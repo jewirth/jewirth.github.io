@@ -33,19 +33,21 @@ I recently bought a Dell XPS 15 9570 (2018). These are my notes for setting up a
 # Boot Linux from your USB drive
 - Enable Legacy Mode to be able to boot Linux from an USB drive
 - Once you booted your Linux USB drive, you will notice that your internal SDD is not visible (check fdisk -l)
-- Enable AHCI in the Bios to make Linux see your internal SDD (check fdisk -l)
+- We need to enable AHCI in the Bios to make Linux see your internal SDD (check fdisk -l)
 
-# Install Linux to your internal SDD
-- You can now run the installer to install Linux to your internal SDD
-- TODO: How & where to install the bootloader for dual boot?
-
-# And now?
-- With AHCI is enabled, the preinstalled Windows 10 won't boot :-(
+# Enable AHCI mode
+- With AHCI is enabled, the preinstalled Windows 10 won't boot :-( let's fix this first
 - In Windows, run cmd.exe as admin and type ```bcdedit /set {current} safeboot minimal```
 - Reboot, e.g. with shutdown /r
 - Enter BIOS and switch from RAID to AHCI
 - Boot into Windows - which runs in Safemode now - and run cmd.exe as admin and type ```bcdedit /deletevalue {current} safeboot```
 - Reboot, e.g. with shutdown /r
 - At this point, your BIOS is set to AHCI mode and Windows should boot properly
+
+# Install Linux to your internal SDD
+- You can now run the installer to install Linux to your internal SDD
+- TODO: How & where to install the bootloader for dual boot?
+
+
 
 
