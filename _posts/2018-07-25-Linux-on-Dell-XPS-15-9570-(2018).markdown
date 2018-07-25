@@ -13,16 +13,33 @@ I recently bought a Dell XPS 15 9570 (2018). These are my notes for setting up a
 - I bought the variant with i7-8750H CPU, 16 GB of RAM and 512 GB of SDD
 - The SDD is a M.2 2280 PCIe Solid State Drive
 
-## Boot related settings in nowadays BIOS:
-- UEFI: Unified Extensible Firmware Interface
+## Boot related settings in the BIOS:
+- UEFI (Unified Extensible Firmware Interface)
 - Legacy Mode: booting non UEFI supported operating systems
 - SecureBoot: A protocol defined since UEFI 2.3.1 Errata C specification
 - IDE / AHCI / Raid
 
 
-# How to boot Linux from an USB drive?
+## Install Linux on the internal SDD along with Windows 10
+
+# Create free space for Linux
+- Go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition"
+- Right-click the biggest partition called "OS (C:)" and select "Shrink Volume"
+- Decide how much you would like to shrink... I shrinked it down to approx. 50% (236185 MB)
+
+# Create a bootable USB drive with Linux
+- TODO: explain
+
+# Boot Linux from your USB drive
 - Enable Legacy Mode to be able to boot Linux from an USB drive
 - Once you booted your Linux USB drive, you will notice that your internal SDD is not visible (check fdisk -l)
 - Enable AHCI in the Bios to make Linux see your internal SDD (check fdisk -l)
+
+# Install Linux to your internal SDD
+- You can now run the installer to install Linux to your internal SDD
+- TODO: How & where to install the bootloader for dual boot?
+
+# And now?
 - With AHCI is enabled, the preinstalled Windows 10 won't boot :-(
-- *TODO: How to install AHCI drivers in Windows 10 to make them available when Windows boots*
+- TODO: How to install AHCI drivers in Windows 10 to make them available when Windows boots
+
