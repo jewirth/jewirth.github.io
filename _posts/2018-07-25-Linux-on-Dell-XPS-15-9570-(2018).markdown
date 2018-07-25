@@ -3,4 +3,26 @@ layout: post
 title: "Linux on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
-I recently bought a Dell XPS 15 9570 (2018). These are my notes about setting up a Dual Boot System allowing to run Linux Mint and the pre-installed Windows 10 operating system.
+*This page is a DRAFT! It's currently being created. You are welcome to modify it. Feel free to create a PR or just mail me.*
+
+I recently bought a Dell XPS 15 9570 (2018). These are my notes for setting up a dual boot system allowing me to run my favorite GNU/Linux distribution - Linux Mint - and the pre-installed Windows 10 operating system.
+
+# Collecting some important stuff to know
+
+## Hardware
+- I bought the variant with i7-8750H CPU, 16 GB of RAM and 512 GB of SDD
+- The SDD is a M.2 2280 PCIe Solid State Drive
+
+## Boot related settings in nowadays BIOS:
+- UEFI: Unified Extensible Firmware Interface
+- Legacy Mode: booting non UEFI supported operating systems
+- SecureBoot: A protocol defined since UEFI 2.3.1 Errata C specification
+- IDE / AHCI / Raid
+
+
+# How to boot Linux from an USB drive?
+- Enable Legacy Mode to be able to boot Linux from an USB drive
+- Once you booted your Linux USB drive, you will notice that your internal SDD is not visible (check fdisk -l)
+- Enable AHCI in the Bios to make Linux see your internal SDD (check fdisk -l)
+- With AHCI is enabled, the preinstalled Windows 10 won't boot :-(
+- *TODO: How to install AHCI drivers in Windows 10 to make them available when Windows boots*
