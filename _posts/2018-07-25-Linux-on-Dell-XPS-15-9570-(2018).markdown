@@ -41,5 +41,11 @@ I recently bought a Dell XPS 15 9570 (2018). These are my notes for setting up a
 
 # And now?
 - With AHCI is enabled, the preinstalled Windows 10 won't boot :-(
-- TODO: How to install AHCI drivers in Windows 10 to make them available when Windows boots
+- In Windows, run cmd.exe as admin and type ```bcdedit /set {current} safeboot minimal```
+- Reboot, e.g. with shutdown /r
+- Enter BIOS and switch from RAID to AHCI
+- Boot into Windows - which runs in Safemode now - and run cmd.exe as admin and type ```bcdedit /deletevalue {current} safeboot```
+- Reboot, e.g. with shutdown /r
+- At this point, your BIOS is set to AHCI mode and Windows should boot properly
+
 
