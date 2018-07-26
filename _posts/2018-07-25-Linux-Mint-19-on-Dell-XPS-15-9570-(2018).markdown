@@ -87,6 +87,8 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
 - Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time ...TODO: execute this at boot time!
 
+
+
 ## 3.3 My current BIOS settings
 - Settings --> General --> System Information --> Bios version: 1.2.2
 - Settings --> General --> Boot Sequence --> Boot List Option --> UEFI
@@ -97,4 +99,8 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
 # 4 TODO: Things I haven't tried yet
-- Try i8kutils
+
+- sudo apt install i8kutils
+- sudo -i; echo "options i8k force=1"  >  /etc/modprobe.d/i8k.conf
+- echo i8k  >> /etc/modules; exit
+- sudo modprobe -v i8k
