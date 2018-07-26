@@ -87,26 +87,13 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
 
 ## 3.3 My current BIOS settings
-### Settings
-#### General
-##### System Information
-- Bios version: 1.2.2
-##### Boot Sequence
-- [X] ubuntu
-- [X] Windows Boot Manager
-- Boot List Option: (o) UEFI
-##### Advanced Boot Options
-- nothing is selected here
-##### UEFI Boot Path Security
-- Always
-#### System Configuration
-##### SATA Operation
-- AHCI
-#### Secure Boot
-##### Secure Boot Enable
-- [X] Secure Boot Enable
-##### Secure Boot Mode
-- (o) Audit Mode  --> I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...
+- Settings --> General --> System Information --> Bios version: 1.2.2
+- Settings --> General --> Boot Sequence --> Boot List Option --> UEFI
+- Settings --> General --> Advanced Boot Options --> nothing is selected here
+- Settings --> General --> UEFI Boot Path Security --> Always
+- Settings --> System Configuration --> SATA Operation --> AHCI
+- Settings --> Secure Boot --> Secure Boot Enable --> Secure Boot Enable
+- Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
 # 4 TODO: Things I haven't tried yet
 - Is this enough to simply switch the GPU off as described in 3.2 or does ```sudo /usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` does anything better?
