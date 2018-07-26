@@ -85,6 +85,8 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Open the NVIDIA X Server Settings
 - Switch to GPU "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
+- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time
+- TODO: execute above at boot time!
 
 ## 3.3 My current BIOS settings
 - Settings --> General --> System Information --> Bios version: 1.2.2
@@ -96,5 +98,4 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
 # 4 TODO: Things I haven't tried yet
-- Is this enough to simply switch the GPU off as described in 3.2 or does ```sudo /usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` does anything better?
 - Try i8kutils
