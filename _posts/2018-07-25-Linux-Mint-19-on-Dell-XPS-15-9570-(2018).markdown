@@ -1,0 +1,113 @@
+---
+layout: post
+title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
+date: 2018-07-25 19:37:00 +0200
+---
+*This page is a DRAFT! It's currently being created. You are welcome to modify it. Feel free to create a PR or just mail me.*
+
+I recently bought a Dell XPS 15 9570 (2018) with:
+- i7-8750H CPU
+- 16 GB of RAM
+- 512 GB of SSD (M.2 2280 PCIe)
+- Windows 10 Pro
+
+These are my notes for setting up a dual boot system allowing me to boot:
+- Linux Mint 19 (linuxmint-19-cinnamon-64bit-v2.iso)
+- The pre-installed Windows 10 operating system
+
+# 1 Prerequisites
+
+## 1.1 Create a bootable Live Linux bootable USB drive
+If you don't have a Live Linux bootable USB drive I would recommend to create one on your old computer (so we don't touch anything on the new machine for now):
+- If you have Linux, simply ```dd``` the image to an USB drive. Example: ```dd if=linuxmint-19-cinnamon-64bit-v2.iso of=/dev/sdb bs=100M```
+- If you have Windows, there is this easy to use tool: [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/)
+- You can use this Live Linux as Linux installer later.
+
+## 1.2 Back up the original state of the harddrive
+First of all, I dumped the harddrive of the new notebook just as it comes out of the box:
+- Insert a Live Linux bootable USB drive to one USB port
+- Insert a USB drive where we can store the dumped data to the other USB port
+- Power on the notebook and press F12 when you see the Dell logo to open the boot menu
+- Select your Live Linux bootable USB drive to boot your external Linux
+- Dump your harddrive with dd: ```dd if=/dev//dev/nvme0n1 of=<your-external-drive-to-store-the-dump>/xps-nvme01.dump bs=100M ```
+- The step above will take some time. You can check the progress by sending the signal SIGUSR1 to dd: ```sudo kill <pid of dd> -s 10```
+- Shutdown
+
+## 1.3 Enable AHCI
+By default, my notebook came with the SATA Operation Mode set to RAID. Linux wasn't able to find the device so I had to switch the SATA Operation Mode from RAID to AHCI. Unluckily, Windows 10 didn't boot anymore with AHCI mode, so you have to make Windows able to boot in AHCI mode, too. Here are the steps to enable AHCI and keep Windows working:
+- Boot Windows, run cmd.exe as admin and type ```bcdedit /set {current} safeboot minimal```
+- Reboot, e.g. with shutdown /r
+- Power on the notebook and press F2 when you see the Dell logo to open the Bios setup menu
+- In the Bios menu goto: "Settings" -> "System Configuration" -> "SATA Operation" and select AHCI
+- Boot into Windows again - which runs in Safemode now - and run cmd.exe as admin and type ```bcdedit /deletevalue {current} safeboot```
+- Reboot, e.g. with shutdown /r
+- At this point, your BIOS is set to AHCI mode and Windows should boot normally
+
+## 1.4 Create free space for Linux
+- In Window, go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition"
+- Right-click the biggest partition called "OS (C:)" and select "Shrink Volume"
+- Decide how much you would like to shrink... I shrinked it down to approx. 50% (236185 MB)
+
+## 1.5 Create a bootable USB drive with Linux to install Linux
+We will install Linux from a Live Linux bootable USB drive. If you already have created one in step 1.1 or already have one lying around which you want to use to install Linux then you are done here. Otherwise, create it as describe in 1.1.
+
+
+# 2 Installation
+
+- Have your Live Linux bootable USB drive attached while powering on your notebook
+- Power on the notebook and press F12 when you see the Dell logo to open the boot menu
+- Select your USB drive with the Live Linux. If you it twice, then select the one with UEFI.
+- You can now run the installer from your Live Linux USB drive to install Linux to your internal SDD. For Linux Mint, there is an installer symbol on the Desktop which you need to double click.
+- When the installer asks for the "Installation Type" then select "Something else".
+- Now use the GUI to select the free space you created in step 1.4 and add a swap and a root-partition there
+- Keep the setting for "Device for boot loader installation" at the bottom as it is
+- Continue to install Linux
+
+# 3 Some necessary configuration
+
+## 3.1 First boot after the installation
+Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint or Windows. The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
+- Waiting for grub to show up after powering on the notebook
+- Select "Advanced"
+- Select "Continue Normal Boot"
+- Run the driver manager in Linux Mate
+- Install gfx driver as recommended by the Driver Manager
+- Reboot
+- The notebook shall now boot into Linux Mint with any problems
+
+
+## 3.2 Some more tuning
+- Install updates as recommended by the Update Manager
+- Reboot into Windows
+- Run the DELL Update Tool which - in my case - updated the BIOS Firmware of my notebook
+- Reboot into Linux
+- run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
+- Open the NVIDIA X Server Settings
+- Switch to GPU "Intel (Power Saving Mode)"
+- Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
+
+## 3.3 My current BIOS settings
+### Settings
+#### General
+##### System Information
+- Bios version: 1.2.2
+##### Boot Sequence
+- [X] ubuntu
+- [X] Windows Boot Manager
+- Boot List Option: (o) UEFI
+##### Advanced Boot Options
+- nothing is selected here
+##### UEFI Boot Path Security
+- Always
+#### System Configuration
+##### SATA Operation
+- AHCI
+#### Secure Boot
+##### Secure Boot Enable
+- [X] Secure Boot Enable
+##### Secure Boot Mode
+- (o) Audit Mode  --> I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...
+
+# 4 TODO: Things I haven't tried yet
+- Is this enough to simply switch the GPU off as described in 3.2 or does ```sudo /usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` does anything better?
+- Try i8kutils
