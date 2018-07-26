@@ -30,7 +30,7 @@ First of all, I dumped the harddrive of the new notebook just as it comes out of
 - Power on the notebook and press F12 when you see the Dell logo to open the boot menu
 - Select your Live Linux bootable USB drive to boot your external Linux
 - Dump your harddrive with dd: ```dd if=/dev//dev/nvme0n1 of=<your-external-drive-to-store-the-dump>/xps-nvme01.dump bs=100M ```
-- The step above will take some time. You can check the progress by sending the signal SIGUSR1 to dd: ```sudo kill <pid of dd> -s 10```
+- The step will take some time. You can check the progress by sending the signal SIGUSR1 to dd: ```sudo kill <pid of dd> -s 10```
 - Shutdown
 
 ## 1.3 Enable AHCI
@@ -85,8 +85,7 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Open the NVIDIA X Server Settings
 - Switch to GPU "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
-- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time
-- TODO: execute above at boot time!
+- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time ...TODO: execute this at boot time!
 
 ## 3.3 My current BIOS settings
 - Settings --> General --> System Information --> Bios version: 1.2.2
