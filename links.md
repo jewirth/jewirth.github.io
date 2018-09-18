@@ -15,7 +15,8 @@ permalink: /links/
 	<a href="#linux">linux</a> -
 	<a href="#electronics">electronics</a> -
 	<a href="#hamradio">ham radio</a> -
-	<a href="#misc">misc</a>
+	<a href="#misc">misc</a> -
+	<a href="#ashley">Ashley's IQ tests</a>
 </div>
 
 # funny stuff <a name="funnystuff"></a>
@@ -34,7 +35,7 @@ permalink: /links/
 - [Simply Noise](https://simplynoise.com/)
 
 # music <a name="music"></a>
-- [kohina - 8/16-bit arcade soundtacks](http://kohina.net/)
+- [kohina - 8/16-bit arcade soundtacks](http://kohina.com/)
 - [Retrowave mixes on Youtube](https://www.youtube.com/results?search_query=retrowave)
 
 # programming <a name="programming"></a>
@@ -68,11 +69,11 @@ permalink: /links/
 - [LKML.ORG - the Linux Kernel Mailing List Archive](https://lkml.org/)
 - [Linux Kernel Newbies - Linux Kernel Newbies](http://kernelnewbies.org/)
 - [Open Source im Unternehmen \| heise open](http://www.heise.de/open/)
-- [How to: Shellcode to reverse bind a shell with netcat](http://morgawr.github.io/hacking/2014/03/29/shellcode-to-reverse-bind-with-netcat/)
+- [How to: Shellcode to reverse bind a shell with netcat](https://morgawr.github.io/hacking/2014/03/29/shellcode-to-reverse-bind-with-netcat)
 - [HOWTO: Boot your Raspberry Pi into a fullscreen browser kiosk \| Wired Watershed](http://blogs.wcode.org/2013/09/howto-boot-your-raspberry-pi-into-a-fullscreen-browser-kiosk/)
 - [All commands \| commandlinefu.com](http://www.commandlinefu.com/commands/browse)
 - [eLinux.org](http://elinux.org/Main_Page)
-- [QEMU - Emulating Raspberry Pi the easy way (Linux or Windows!)](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
+- ~~~[QEMU - Emulating Raspberry Pi the easy way (Linux or Windows!)](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)~~~
 - [Penetration Testing Tools Cheat Sheet](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)
 
 # electronics <a name="electronics"></a>
@@ -89,7 +90,7 @@ permalink: /links/
 - [Lightning & Thunderstorms - World Map](http://en.blitzortung.org/live_lightning_maps.php)
 - [80-30m Mag Loop](https://www.nonstopsystems.com/radio/frank_radio_antenna_magloop.htm)
 - [Fundamentals of the MiniWhip antenna](http://www.pa3fwm.nl/technotes/tn07.html)
-- [Baofeng UV5R modulation improvement mod](http://remco.org/index.php/2013/01/05/baofeng-uv5r-modulation-improvement-mod/)
+- [Baofeng UV5R modulation improvement mod](https://hamgear.wordpress.com/2013/05/02/baofeng-uv-5r-modulation-modification/)
 - [VOACAP - HF Propagation Prediction and Ionospheric Communications Analysis](http://www.voacap.com/area/index.html)
 
 # misc <a name="misc"></a>
@@ -108,3 +109,10 @@ permalink: /links/
 - [Compressor.io - optimize and compress your images and photos](https://compressor.io/)
 - [wavepot](http://wavepot.com/)
 - [pigshell - unix the web](http://pigshell.com/v/0.6.2/)
+
+# Ashley's IQ tests (thank you Ashley for check my links for validity!) <a name="ashley"></a>
+- [IQ Test Prep](https://iqtestprep.com)
+- [Stanford Binet IQ Test](https://stanfordbinetiqtest.com)
+
+
+
