@@ -73,7 +73,7 @@ permalink: /links/
 - [HOWTO: Boot your Raspberry Pi into a fullscreen browser kiosk \| Wired Watershed](http://blogs.wcode.org/2013/09/howto-boot-your-raspberry-pi-into-a-fullscreen-browser-kiosk/)
 - [All commands \| commandlinefu.com](http://www.commandlinefu.com/commands/browse)
 - [eLinux.org](http://elinux.org/Main_Page)
-- ~~~[QEMU - Emulating Raspberry Pi the easy way (Linux or Windows!)](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)~~~
+- ~~[QEMU - Emulating Raspberry Pi the easy way (Linux or Windows!)](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)~~
 - [Penetration Testing Tools Cheat Sheet](https://highon.coffee/blog/penetration-testing-tools-cheat-sheet/)
 
 # electronics <a name="electronics"></a>
@@ -110,7 +110,8 @@ permalink: /links/
 - [wavepot](http://wavepot.com/)
 - [pigshell - unix the web](http://pigshell.com/v/0.6.2/)
 
-# Ashley's IQ tests (thank you Ashley for check my links for validity!) <a name="ashley"></a>
+# Ashley's IQ tests <a name="ashley"></a>
+*Thank you for notifying me about dead links, Ashley!*
 - [IQ Test Prep](https://iqtestprep.com)
 - [Stanford Binet IQ Test](https://stanfordbinetiqtest.com)
 
