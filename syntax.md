@@ -541,7 +541,16 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     git push --force
 
 ## squash
-    # squash the last 2 commits
-    git reset --hard HEAD~2          # git back 2 commits 
+All squash examples below will squash the last 5 commits
+
+### via merge
+    git reset --hard HEAD~5          # git back 5 commits 
     git merge --squash HEAD@{1}      # squash from here to HEAD
-    git commit
+    git commit                       # editor will come up with all commit messages
+
+### via reset
+    git reset --soft HEAD~5 && git commit   # editor will come with empty commit message
+
+### via interactive rebase
+    git rebase -i HEAD~5
+
