@@ -526,25 +526,22 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
 
 # git stuff
 
-## get updates incl. submodules
-    git fetch --recurse-submodules
-    
-## clone a certain commit
-    git clone $URL
-    cd $PROJECT_NAME
-    git reset --hard $SHA1
-    ...or     git checkout $SHA1 --force --recurse-submodules
-
 ## undo
     git reset HEAD~                  # undo last commit
     git reset HEAD~N                 # undo last N commits
     git reset --soft HEAD~           # undo last commit and keep staged stuff
-    git reset --hard HEAD~N          # undo last commit (and discard changes?)
+    git reset --hard HEAD~           # undo last commit and discard changes
     git gc --prune=now --aggressive  # force git to run garbage collector
 
 ## rebase your branch to latest master on origin
     git checkout master
-    git pull origin master
-    git checkout -           # goes back to your branch
+    git pull
+    git checkout -                   # goes back to your branch
     git rebase master
     git push --force
+
+## squash
+    # squash the last 2 commits
+    git reset --hard HEAD~2          # git back 2 commits 
+    git merge --squash HEAD@{1}      # squash from here to HEAD
+    git commit
