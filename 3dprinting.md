@@ -7,9 +7,13 @@ permalink: /3dprinting/
 # what's here?
 These are my personal notes about 3D printing.
 
-# jens' ender-3 profile for PLA from OWL-Sat
+# jens' cura profile for Ender-3 with PLA from OWL-Sat
+Currently, this is my favorite Cura profile for printing OWL-Sat's PLA on my Creality Ender-3.
 
-[jens_owl_pla.ini](http://snej.de/downloads/jens_owl_pla.ini)
+Slicer:  Cura 15.04.3
+Profile: [jens_owl_pla.ini](http://snej.de/downloads/jens_owl_pla.ini)
+
+Profile 
 
     Quality 
         Layer height (mm)                   0.15
