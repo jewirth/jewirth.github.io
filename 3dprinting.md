@@ -14,7 +14,7 @@ Slicer:  Cura 15.04.3
 
 Profile: [jens_owl_pla.ini](http://snej.de/downloads/jens_owl_pla.ini)
 
-Profile 
+Profile values:
 
     Quality 
         Layer height (mm)                   0.15
