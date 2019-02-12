@@ -552,5 +552,10 @@ All squash examples below will squash the last 5 commits
     git reset --soft HEAD~5 && git commit   # editor will come with empty commit message
 
 ### via interactive rebase
-    git rebase -i HEAD~5
+    git rebase -i HEAD~5             # then select s (squash) for the commits to squash
+
+## amend multiple commits
+    git rebase -i HEAD~5             # then select e (edit) for the commits to amend
+                                     # then call git commit --amend && git rebase --continue
+                                     # ...until all commits have been amended
 
