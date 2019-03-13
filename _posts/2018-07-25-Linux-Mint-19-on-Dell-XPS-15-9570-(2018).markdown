@@ -3,8 +3,6 @@ layout: post
 title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
-*This page is a DRAFT! It's currently being created. You are welcome to modify it. Feel free to create a PR or just mail me.*
-
 I recently bought a Dell XPS 15 9570 (2018) with:
 - i7-8750H CPU
 - 16 GB of RAM
