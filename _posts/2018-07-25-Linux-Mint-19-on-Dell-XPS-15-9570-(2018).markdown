@@ -68,9 +68,9 @@ We will install Linux from a Live Linux bootable USB drive. If you already have 
 ## 3.1 First boot after the installation
 Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint or Windows. The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
 - Waiting for grub to show up after powering on the notebook
-- Select "Advanced"
+- Select "Advanced", then the one saying "(recovery mode)"
 - Select "Continue Normal Boot"
-- Run the driver manager in Linux Mate
+- Run the driver manager in Linux Mint
 - Install gfx driver as recommended by the Driver Manager
 - Reboot
 - The notebook shall now boot into Linux Mint with any problems
