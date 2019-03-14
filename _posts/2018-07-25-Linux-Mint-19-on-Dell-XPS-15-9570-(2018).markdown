@@ -69,7 +69,10 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Select "Advanced", then the one saying "(recovery mode)"
 - Select "Continue Normal Boot"
 - Run the driver manager in Linux Mint
-- Install gfx driver as recommended by the Driver Manager
+- Install gfx driver as recommended by the Driver Manager *...Note: While reinstalling Linux Mint using this guide some month later, I noticed this step did not work. There was no driver manager appearing and there was no recommendation to install a gfx driver. I went to the terminal and ran:*
+  - ```sudo ubuntu-drivers autoinstall```
+  - reboot
+  - ```sudo apt install nvidia-settings```
 - Reboot
 - The notebook shall now boot into Linux Mint with any problems
 
