@@ -51,7 +51,6 @@ We will install Linux from a Live Linux bootable USB drive. If you already have 
 
 
 # 2 Installation
-
 - Have your Live Linux bootable USB drive attached while powering on your notebook
 - Power on the notebook and press F12 when you see the Dell logo to open the boot menu
 - Select your USB drive with the Live Linux. If you it twice, then select the one with UEFI.
@@ -67,12 +66,10 @@ We will install Linux from a Live Linux bootable USB drive. If you already have 
 Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint or Windows. The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
 - Waiting for grub to show up after powering on the notebook
 - Select "Advanced", then the one saying "(recovery mode)"
-- Select "Continue Normal Boot"
+- Select "Resume Normal Boot" (might be necessary multiple times)
+- ***NOTE: I'm not sure about the next steps. It worked in July 2018 but when repeating the process in March 2019, my system became  instable after installing the nvidia driver at this point. Might be due to the current version of the driver.***
 - Run the driver manager in Linux Mint
-- Install gfx driver as recommended by the Driver Manager *...Note: While reinstalling Linux Mint using this guide some month later, I noticed this step did not work. There was no driver manager appearing and there was no recommendation to install a gfx driver. I went to the terminal and ran:*
-  - ```sudo ubuntu-drivers autoinstall```
-  - reboot
-  - ```sudo apt install nvidia-settings```
+- Install gfx driver as recommended by the Driver Manager
 - Reboot
 - The notebook shall now boot into Linux Mint with any problems
 
@@ -83,10 +80,10 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Run the DELL Update Tool which - in my case - updated the BIOS Firmware of my notebook
 - Reboot into Linux
 - run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
-- Open the NVIDIA X Server Settings
-- Switch to GPU "Intel (Power Saving Mode)"
+- *If you have installed the nvidia drivers:* Open the NVIDIA X Server Settings
+- *If you have installed the nvidia drivers:* Switch to GPU "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
-- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time ...TODO: execute this at boot time!
+- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time ...TODO: execute this at boot time! *NOTE: As of March 2019, after running this script my system hung when shutting down, so I had to power off by holding the power button.*
 
 
 
@@ -99,9 +96,5 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Settings --> Secure Boot --> Secure Boot Enable --> Secure Boot Enable
 - Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
-# 4 TODO: Things I haven't tried yet
-
-- sudo apt install i8kutils
-- sudo -i; echo "options i8k force=1"  >  /etc/modprobe.d/i8k.conf
-- echo i8k  >> /etc/modules; exit
-- sudo modprobe -v i8k
+## 3.4 Does it work for you?
+Please drop me a line if you tried these steps. Was it useful? Did you find a better way?
