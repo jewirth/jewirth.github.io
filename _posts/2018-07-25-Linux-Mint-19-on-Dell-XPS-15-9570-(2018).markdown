@@ -67,11 +67,10 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Waiting for grub to show up after powering on the notebook
 - Select "Advanced", then the one saying "(recovery mode)"
 - Select "Resume Normal Boot" (might be necessary multiple times)
-- ***NOTE: I'm not sure about the next steps. It worked in July 2018 but when repeating the process in March 2019, my system became  instable after installing the nvidia driver at this point. Might be due to the current version of the driver.***
 - Run the driver manager in Linux Mint
 - Install gfx driver as recommended by the Driver Manager
 - Reboot
-- The notebook shall now boot into Linux Mint with any problems
+- The notebook shall now boot into Linux Mint without any problems
 
 
 ## 3.2 Some more tuning
