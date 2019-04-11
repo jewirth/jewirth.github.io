@@ -9,9 +9,12 @@ I recently bought a Dell XPS 15 9570 (2018) with:
 - 512 GB of SSD (M.2 2280 PCIe)
 - Windows 10 Pro
 
-These are my notes for setting up a dual boot system allowing me to boot:
-- Linux Mint 19 (linuxmint-19-cinnamon-64bit-v2.iso)
-- The pre-installed Windows 10 operating system
+These are my notes for setting up Linux Mint 19 (linuxmint-19-cinnamon-64bit-v2.iso) on the notebook, solely.
+
+I also describe how to set up a dual boot system allowing to select between Linux Mint and the preinstalled Windows 10 operating system. I had this set up on my notebook for around half a year. Then I noticed, that I actually don't use Windows 10 at all and so I moved over to install Linux Mint only. However, some people might find it helpful to have a dual boot system, so I keep my notes about that here, too.
+
+
+Run the DELL Update Tool which - in my case - updated the BIOS Firmware of my notebook
 
 # 1 Prerequisites
 
@@ -32,7 +35,7 @@ First of all, I dumped the harddrive of the new notebook just as it comes out of
 - Shutdown
 
 ## 1.3 Enable AHCI
-By default, my notebook came with the SATA Operation Mode set to RAID. Linux wasn't able to find the device so I had to switch the SATA Operation Mode from RAID to AHCI. Unluckily, Windows 10 didn't boot anymore with AHCI mode, so you have to make Windows able to boot in AHCI mode, too. Here are the steps to enable AHCI and keep Windows working:
+By default, my notebook came with the SATA Operation Mode set to RAID. Linux wasn't able to find the device so I had to switch the SATA Operation Mode from RAID to AHCI. Unluckily, Windows 10 didn't boot anymore with AHCI mode, so you have to make Windows able to boot in AHCI mode, too. Here are the steps to enable AHCI and keep Windows working (skip if you don't want to keep windows):
 - Boot Windows, run cmd.exe as admin and type ```bcdedit /set {current} safeboot minimal```
 - Reboot, e.g. with shutdown /r
 - Power on the notebook and press F2 when you see the Dell logo to open the Bios setup menu
@@ -41,50 +44,49 @@ By default, my notebook came with the SATA Operation Mode set to RAID. Linux was
 - Reboot, e.g. with shutdown /r
 - At this point, your BIOS is set to AHCI mode and Windows should boot normally
 
-## 1.4 Create free space for Linux
-- In Window, go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition"
+## 1.4 Create free space for Linux (skip if you don't want to keep windows)
+- In Windows, go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition", Enter.
 - Right-click the biggest partition called "OS (C:)" and select "Shrink Volume"
 - Decide how much you would like to shrink... I shrinked it down to approx. 50% (236185 MB)
 
 ## 1.5 Create a bootable USB drive with Linux to install Linux
 We will install Linux from a Live Linux bootable USB drive. If you already have created one in step 1.1 or already have one lying around which you want to use to install Linux then you are done here. Otherwise, create it as describe in 1.1.
 
-
 # 2 Installation
 - Have your Live Linux bootable USB drive attached while powering on your notebook
 - Power on the notebook and press F12 when you see the Dell logo to open the boot menu
 - Select your USB drive with the Live Linux. If you it twice, then select the one with UEFI.
 - You can now run the installer from your Live Linux USB drive to install Linux to your internal SDD. For Linux Mint, there is an installer symbol on the Desktop which you need to double click.
+
+if you want to keep windows installed:
 - When the installer asks for the "Installation Type" then select "Something else".
 - Now use the GUI to select the free space you created in step 1.4 and add a swap and a root-partition there
+
+if you do not want to keep windows installed:
+- When the installer asks for the "Installation Type" then select "XXXXXXXXXXXXXXXXXXX"
+
+continue in both cases:
 - Keep the setting for "Device for boot loader installation" at the bottom as it is
 - Continue to install Linux
 
 # 3 Some necessary configuration
 
 ## 3.1 First boot after the installation
-Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint or Windows. The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
+Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint (or Windows if kept it). The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
 - Waiting for grub to show up after powering on the notebook
 - Select "Advanced", then the one saying "(recovery mode)"
 - Select "Resume Normal Boot" (might be necessary multiple times)
 - Run the driver manager in Linux Mint
-- Install gfx driver as recommended by the Driver Manager
+- Install nvidia driver as recommended by the Driver Manager
 - Reboot
 - The notebook shall now boot into Linux Mint without any problems
 
-
 ## 3.2 Some more tuning
 - Install updates as recommended by the Update Manager
-- Reboot into Windows
-- Run the DELL Update Tool which - in my case - updated the BIOS Firmware of my notebook
-- Reboot into Linux
 - run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
-- *If you have installed the nvidia drivers:* Open the NVIDIA X Server Settings
-- *If you have installed the nvidia drivers:* Switch to GPU "Intel (Power Saving Mode)"
+- Open the NVIDIA X Server Settings and switch GPU to "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
-- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time ...TODO: execute this at boot time! *NOTE: As of March 2019, after running this script my system hung when shutting down, so I had to power off by holding the power button.*
-
-
+- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time *NOTE: As of March 2019, after running this script my system hung when shutting down, so I had to power off by holding the power button.*
 
 ## 3.3 My current BIOS settings
 - Settings --> General --> System Information --> Bios version: 1.2.2
