@@ -63,7 +63,7 @@ if you want to keep windows installed:
 - Now use the GUI to select the free space you created in step 1.4 and add a swap and a root-partition there
 
 if you do not want to keep windows installed:
-- When the installer asks for the "Installation Type" then select "XXXXXXXXXXXXXXXXXXX"
+- When the installer asks for the "Installation Type" then select "Erase disk and install Linux Mint"
 
 continue in both cases:
 - Keep the setting for "Device for boot loader installation" at the bottom as it is
