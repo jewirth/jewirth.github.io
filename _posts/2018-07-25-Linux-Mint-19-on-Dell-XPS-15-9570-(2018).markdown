@@ -55,18 +55,18 @@ We will install Linux from a Live Linux bootable USB drive. If you already have 
 # 2 Installation
 - Have your Live Linux bootable USB drive attached while powering on your notebook
 - Power on the notebook and press F12 when you see the Dell logo to open the boot menu
-- Select your USB drive with the Live Linux. If you it twice, then select the one with UEFI.
+- Select your USB drive with the Live Linux. You may see it multiple time. Select the one saying UEFI.
 - You can now run the installer from your Live Linux USB drive to install Linux to your internal SDD. For Linux Mint, there is an installer symbol on the Desktop which you need to double click.
 
-if you want to keep windows installed:
+If you want to keep windows installed:
 - When the installer asks for the "Installation Type" then select "Something else".
 - Now use the GUI to select the free space you created in step 1.4 and add a swap and a root-partition there
+- Keep the setting for "Device for boot loader installation" at the bottom as it is
 
-if you do not want to keep windows installed:
+If you do not want to keep windows installed:
 - When the installer asks for the "Installation Type" then select "Erase disk and install Linux Mint"
 
-continue in both cases:
-- Keep the setting for "Device for boot loader installation" at the bottom as it is
+Continue in both cases:
 - Continue to install Linux
 
 # 3 Some necessary configuration
