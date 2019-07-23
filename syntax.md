@@ -417,7 +417,8 @@ kill or enable the OS X dashboard
 <a name="256"></a>
 
 ### cut video file
-    ffmpeg -i input_video.mp4 -ss 00:02:15 -to 00:05:30 -c copy output_video.mp4
+    ffmpeg -i input_video.mp4 -ss 00:02:15 -to 00:05:30 -c copy      output_video.mp4    # cut before 2:15 and after 5:30
+    ffmpeg -i input.mkv       -ss 00:00:00  -t 00:30:00 -codec copy  out.mkv             # cut after 30 minutes
 
 <a name="3"></a>
 
