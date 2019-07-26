@@ -24,6 +24,7 @@ If you don't have a Live Linux bootable USB drive I would recommend to create on
 - If you have Linux, simply ```dd``` the image to an USB drive. Example: ```dd if=linuxmint-19-cinnamon-64bit-v2.iso of=/dev/sdb bs=100M```
 - If you have Windows, there is this easy to use tool: [Universal USB Installer](https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/)
 - You can use this Live Linux as Linux installer later.
+- *IMPORTANT NOTE: I had some strange issues with booting Linux from a certain USB drive. Everything suddenly worked well when trying another USB drive. So, if something doesn't work as expected, try another USB drive first.*
 
 ## 1.2 Back up the original state of the harddrive
 First of all, I dumped the harddrive of the new notebook just as it comes out of the box:
