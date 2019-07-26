@@ -4,7 +4,8 @@ title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
 
-*NOTE: I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).* **This page has been update on 26th of July 2019**
+*NOTE: I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).*
+**This page has been updated on 26th of July 2019**
 
 ---
 
