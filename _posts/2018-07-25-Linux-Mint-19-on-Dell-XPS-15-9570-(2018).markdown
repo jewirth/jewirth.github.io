@@ -3,18 +3,19 @@ layout: post
 title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
-I recently bought a Dell XPS 15 9570 (2018) with:
+
+*NOTE: I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).* **This page has been update on 26th of July 2019**
+
+---
+
+In July 2018, I bought a Dell XPS 15 9570 (2018) with the following specs:
 - i7-8750H CPU
 - 16 GB of RAM
 - 512 GB of SSD (M.2 2280 PCIe)
 - Windows 10 Pro
 
-These are my notes for setting up Linux Mint 19 (linuxmint-19-cinnamon-64bit-v2.iso) on the notebook, solely.
+The following steps are my personal notes for setting up Linux Mint on the notebook. I also describe how to set up a dual boot system allowing to select between Linux Mint and the preinstalled Windows 10 operating system. I had this set up on my notebook for around half a year. Then I noticed, that I actually don't use Windows 10 at all and so I moved over to install Linux Mint only. However, some people might find it helpful to have a dual boot system, so I keep my notes about that here, too.
 
-I also describe how to set up a dual boot system allowing to select between Linux Mint and the preinstalled Windows 10 operating system. I had this set up on my notebook for around half a year. Then I noticed, that I actually don't use Windows 10 at all and so I moved over to install Linux Mint only. However, some people might find it helpful to have a dual boot system, so I keep my notes about that here, too.
-
-
-Run the DELL Update Tool which - in my case - updated the BIOS Firmware of my notebook
 
 # 1 Prerequisites
 
@@ -33,8 +34,13 @@ First of all, I dumped the harddrive of the new notebook just as it comes out of
 - Dump your harddrive with dd: ```dd if=/dev//dev/nvme0n1 of=<your-external-drive-to-store-the-dump>/xps-nvme01.dump bs=100M ```
 - The step will take some time. You can check the progress by sending the signal SIGUSR1 to dd: ```sudo kill <pid of dd> -s 10```
 - Shutdown
+- Now, we have successfully cloned the harddisk content. This is uper useful if we mess up something or if you simply want to go back to the pre-installed Windows 10. 
 
-## 1.3 Enable AHCI
+## 1.3 DELL Update Tool
+
+Boot into the preinstalled Windows 10 and run the DELL Update Tool which - in my case - updated the BIOS Firmware of the notebook.
+
+## 1.4 Enable AHCI
 By default, my notebook came with the SATA Operation Mode set to RAID. Linux wasn't able to find the device so I had to switch the SATA Operation Mode from RAID to AHCI. Unluckily, Windows 10 didn't boot anymore with AHCI mode, so you have to make Windows able to boot in AHCI mode, too. Here are the steps to enable AHCI and keep Windows working (skip if you don't want to keep windows):
 - Boot Windows, run cmd.exe as admin and type ```bcdedit /set {current} safeboot minimal```
 - Reboot, e.g. with shutdown /r
@@ -44,12 +50,12 @@ By default, my notebook came with the SATA Operation Mode set to RAID. Linux was
 - Reboot, e.g. with shutdown /r
 - At this point, your BIOS is set to AHCI mode and Windows should boot normally
 
-## 1.4 Create free space for Linux (skip if you don't want to keep windows)
+## 1.5 Create free space for Linux (skip if you don't want to keep windows)
 - In Windows, go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition", Enter.
 - Right-click the biggest partition called "OS (C:)" and select "Shrink Volume"
 - Decide how much you would like to shrink... I shrinked it down to approx. 50% (236185 MB)
 
-## 1.5 Create a bootable USB drive with Linux to install Linux
+## 1.6 Create a bootable USB drive with Linux to install Linux
 We will install Linux from a Live Linux bootable USB drive. If you already have created one in step 1.1 or already have one lying around which you want to use to install Linux then you are done here. Otherwise, create it as describe in 1.1.
 
 # 2 Installation
@@ -69,7 +75,7 @@ If you do not want to keep windows installed:
 Continue in both cases:
 - Continue to install Linux
 
-# 3 Some necessary configuration
+# 3 Let's tune it
 
 ## 3.1 First boot after the installation
 Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint (or Windows if kept it). The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
@@ -78,6 +84,9 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Select "Resume Normal Boot" (might be necessary multiple times)
 - Run the driver manager in Linux Mint
 - Install nvidia driver as recommended by the Driver Manager
+- Reboot
+- Run the Update Manager , click "refresh" and install the updates.
+- Repeat the previous step until there are no more updates to install. *NOTE: Especially Kernel Updates may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. (Thank you for reporting this, Michael!)*
 - Reboot
 - The notebook shall now boot into Linux Mint without any problems
 
