@@ -4,7 +4,7 @@ title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
 
-*I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).* **This page has been updated on 26th of July 2019**
+*I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).* **This page has been updated on 27th of July 2019**
 
 ---
 
@@ -79,26 +79,37 @@ Continue in both cases:
 # 3 Let's tune it
 
 ## 3.1 First boot after the installation
-Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint (or Windows if kept it). The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
+Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint (or Windows if you kept it). The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
 - Waiting for grub to show up after powering on the notebook
 - Select "Advanced", then the one saying "(recovery mode)"
 - Select "Resume Normal Boot" (might be necessary multiple times)
+
+## 3.2 Install GFX driver 
 - Run the driver manager in Linux Mint
 - Install nvidia driver as recommended by the Driver Manager
 - Reboot
-- Run the Update Manager , click "refresh" and install the updates.
-- Repeat the previous step until there are no more updates to install. *NOTE: Especially Kernel Updates may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. (Thank you for reporting this, Michael!)*
-- Reboot
-- The notebook shall now boot into Linux Mint without any problems
 
-## 3.2 Some more tuning
-- Install updates as recommended by the Update Manager
+## 3.3 Install Updates
+- Run the Update Manager, click "refresh" and install the updates.
+- Repeat the previous step until there are no more updates to install.
+
+## 3.4 Install a new Kernel
+*A new Kernel may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. (Thank you for reporting that this, Michael!)*
+- Run the Uppdate Manager
+- Within the Update Manager, go the menu "View" -> "Linux Kernels", **read the Warning** and click on "Continue"
+- Select the latest Kernel version. At the time of writing this, it is versioin 5.0.0-20.
+- Click on "Install"
+- When done, reboot
+- The notebook shall now boot into Linux Mint using the latest Kernel version
+
+## 3.5 Some more tuning
 - run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
 - Open the NVIDIA X Server Settings and switch GPU to "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
 - Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time *NOTE: As of March 2019, after running this script my system hung when shutting down, so I had to power off by holding the power button.*
 
-## 3.3 My current BIOS settings
+## 3.6 My BIOS settings
+For reference, these are some of the settings in by Laptop's BIOS which I think could be of interest:
 - Settings --> General --> System Information --> Bios version: 1.2.2
 - Settings --> General --> Boot Sequence --> Boot List Option --> UEFI
 - Settings --> General --> Advanced Boot Options --> nothing is selected here
@@ -107,5 +118,4 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Settings --> Secure Boot --> Secure Boot Enable --> Secure Boot Enable
 - Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
-## 3.4 Does it work for you?
-Please drop me a line if you tried these steps. Was it useful? Did you find a better way?
+## Please drop me a line if you tried these steps. Was it useful? Did you find a better way?
