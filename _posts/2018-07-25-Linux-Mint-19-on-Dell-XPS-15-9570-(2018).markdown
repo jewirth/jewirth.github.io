@@ -94,7 +94,7 @@ Now, when booting, the grub boot loader shows up automatically and offers you to
 - Repeat the previous step until there are no more updates to install.
 
 ## 3.4 Install a new Kernel
-*A new Kernel may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. (Thank you for reporting that this, Michael!)*
+A new Kernel may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. *Thank you for reporting that this, Michael!*
 - Run the Uppdate Manager
 - Within the Update Manager, go the menu "View" -> "Linux Kernels", **read the Warning** and click on "Continue"
 - Select the latest Kernel version. At the time of writing this, it is versioin 5.0.0-20.
