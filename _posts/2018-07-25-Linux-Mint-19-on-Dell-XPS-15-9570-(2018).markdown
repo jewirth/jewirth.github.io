@@ -106,7 +106,7 @@ A new Kernel may severely improve your laptop's behavior when it comes to shutti
 - run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
 - Open the NVIDIA X Server Settings and switch GPU to "Intel (Power Saving Mode)"
 - Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
-- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the cpu down some more degrees and the fans will stay quiet most of the time *NOTE: As of March 2019, after running this script my system hung when shutting down, so I had to power off by holding the power button.*
+- Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the gpu down some more degrees and the fans will stay quiet most of the time. You can automate this task with crontab by adding the crontab entry ```@reboot sleep 60 && /usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh```
 
 ## 3.6 My BIOS settings
 For reference, these are some of the settings in by Laptop's BIOS which I think could be of interest:
