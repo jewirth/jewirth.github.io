@@ -3,7 +3,7 @@ layout: post
 title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
-**This page has been updated on 27th of July 2019**<br />
+**This page has been updated on 4th of October 2019**<br />
 *I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).*
 
 ---
@@ -52,6 +52,10 @@ By default, my notebook came with the SATA Operation Mode set to RAID. Linux was
 - At this point, your BIOS is set to AHCI mode and Windows should boot normally
 
 ## 1.5 Create free space for Linux (skip if you don't want to keep windows)
+- As Sriraman reported (Thank you!), if you use BitLocker encryption on your Windows partition, you may need to disable BitLocker in order to resize your Windows partition, successfully. To do so, run these commands from the PowerShell as Sriraman reported to me:
+  - ```manage-bde -off C:```
+  - ```Disable-Bitlocker -MountPoint "C:"```
+  - ```manage-bde -status "C:"```  (The last step took Sriraman 10 minutes until the decryption completed message showed up.
 - In Windows, go to "Control Panel" -> "System and Security" -> "Administrative Tools" -> "Create and format harddisk partitions" ... this will open the tool called "Disk Management" ... That was intuitive, huh? You can also just hit the Windows-Key and type "partition", Enter.
 - Right-click the biggest partition called "OS (C:)" and select "Shrink Volume"
 - Decide how much you would like to shrink... I shrinked it down to approx. 50% (236185 MB)
