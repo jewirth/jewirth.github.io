@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: page
 title: "Triple Boot Hackintosh (Windows, Linux & macOS) Dell XPS 15 9570"
-date: 2018-07-25 19:37:00 +0200
+permalink: /inprogress/hackintosh/
 ---
+
+*THIS PAGE IS WORK IN PROGRESS... IT WILL BE MOVED TO ANOTHER URL IN FUTURE*
 
 In my previous post, I explained how to install Linux Mint on the Dell XPS 9570 solely or along with the pre-installted Windows 10. This post explains how to turn your XPS 9570 into a Hackintosh running macOS Mojave. And, because we can, we keep Windows 10 and Linux Mint installed *TODO keep or reinstall?*. So, we end up with a triple boot system running Windows 10, Linux and macOS.
 

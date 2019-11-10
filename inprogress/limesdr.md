@@ -1,8 +1,10 @@
 ---
 layout: page
 title: LimeSDR
-permalink: /limesdr/
+permalink: /inprogress/limesdr/
 ---
+
+*THIS PAGE IS WORK IN PROGRESS... IT WILL BE MOVED TO ANOTHER URL IN FUTURE*
 
 # what is LimeSDR?
 LimeSDR is a fully open source [software defined radio (SDR)](https://en.wikipedia.org/wiki/Software-defined_radio) board created by [Lime Microsystems](http://www.limemicro.com/) and funded via [Crowd Supply](https://www.crowdsupply.com/lime-micro/limesdr) in June 2016. Lime Microsystems is also the manufacturer of the [field programmable RF (FPRF)](https://en.wikipedia.org/wiki/Field_Programmable_RF) IC [LMS7002M](http://www.limemicro.com/products/field-programmable-rf-ics-lms7002m/) which is the central component on the LimeSDR board.
