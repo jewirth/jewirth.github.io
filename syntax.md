@@ -30,6 +30,7 @@ Hall of Syntax:
   - <a href="#256">cut video file</a>
 3. <a href="#3">syntax mess</a>
 4. <a href="#4">git stuff</a>
+5. <a href="#5">synology</a>
 
 <a name="1"></a>
 
@@ -559,4 +560,34 @@ All squash examples below will squash the last 5 commits
     git rebase -i HEAD~5             # then select e (edit) for the commits to amend
                                      # then call git commit --amend && git rebase --continue
                                      # ...until all commits have been amended
+
+
+<a name="5"></a>
+
+# notes for my NAS (Synology DS218j)
+
+## ssh stuff
+
+It's not enough to copy your key to the ```authorized_keys``` file. Therefore:
+
+	# avoid indexing of your data
+	Control Pangel -> Indexing Service -> Media Indexing -> Indexed Folder -> remove all folders
+	Note: Data in your ~/Drive folder will still be index... just don't use the ~/Drive folder :-)
+
+	# enable ssh and rsync
+	Control Panel -> Terminal & SNMP -> Terminal -> Enable SSH servie
+	Control Panel -> File Services -> FTP -> Enable SFTP servie
+	Control Panel -> File Services -> rsync -> Enable rsync service
+	chmod 700 ~/.ssh
+	chmod 600 ~/.ssh/authorized_keys
+	chmod 755 /volume1/homes/$USERNAME
+
+	# add this line in /etc/sshd/sshd_config:
+	RSAAuthentication yes
+
+	# uncomment this line in /etc/sshd/sshd_config:
+	PubkeyAuthentication yes
+
+	# restart
+	sudo synoservicectl --reload sshd
 
