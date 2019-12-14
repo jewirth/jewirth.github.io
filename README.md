@@ -6,6 +6,10 @@ Hello, World! This is the source code of my personal homepage.
 
 Stuff I'm planning to add next:
 - ~~Hall of Syntax~~
+- triple boot hackintosh
+
+
+Idea pool:
 - generic FSM implementation (own, Boost, ...)
 - eRubberduck / random review questions
 - interesting LT Spice simulations / configuration for better FFT results
