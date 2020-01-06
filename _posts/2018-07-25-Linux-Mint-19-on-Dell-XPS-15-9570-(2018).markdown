@@ -124,12 +124,12 @@ A new Kernel may severely improve your laptop's behavior when it comes to shutti
 
 ## 3.6 My BIOS settings
 For reference, these are some of the settings in by Laptop's BIOS which I think could be of interest:
-- Settings --> General --> System Information --> Bios version: 1.2.2
+- Settings --> General --> System Information --> Bios version: 1.7.0
 - Settings --> General --> Boot Sequence --> Boot List Option --> UEFI
 - Settings --> General --> Advanced Boot Options --> nothing is selected here
-- Settings --> General --> UEFI Boot Path Security --> Always
+- Settings --> General --> UEFI Boot Path Security --> Never
 - Settings --> System Configuration --> SATA Operation --> AHCI
-- Settings --> Secure Boot --> Secure Boot Enable --> Secure Boot Enable
+- Settings --> Secure Boot --> Secure Boot Enable --> Secure Boot Enable --> NO 
 - Settings --> Secure Boot --> Secure Boot Mode --> Audit Mode (I changed this to "Audit", default was "Deploy". I experienced much instability when "Audit mode" was enabled. Probably coincidence...)
 
 ## Please drop me a line if you tried these steps. Was it useful? Did you find a better way?
