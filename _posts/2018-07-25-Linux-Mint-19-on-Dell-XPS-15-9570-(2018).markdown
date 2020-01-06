@@ -119,7 +119,7 @@ A new Kernel may severely improve your laptop's behavior when it comes to shutti
 ## 3.5 Some more tuning
 - run ```sudo apt install acpi acpi-call-dkms tlp tlp-rdw```
 - Open the NVIDIA X Server Settings and switch GPU to "Intel (Power Saving Mode)"
-- Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub```
+- Add ```acpi_rev_override=5``` to ```GRUB_CMDLINE_LINUX_DEFAULT``` in ```/etc/default/grub``` and run ```sudo update-grub``` *Note: I'm not sure if this is still necessary with Linux Mint 19.3 Tricia*
 - Running ```/usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh``` will cool the gpu down some more degrees and the fans will stay quiet most of the time. You can automate this task with crontab by adding the crontab entry ```@reboot sleep 60 && /usr/share/doc/acpi-call-dkms/examples/turn_off_gpu.sh```
 
 ## 3.6 My BIOS settings
