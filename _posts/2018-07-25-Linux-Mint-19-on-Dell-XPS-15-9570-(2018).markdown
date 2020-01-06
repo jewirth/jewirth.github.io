@@ -3,7 +3,7 @@ layout: post
 title: "Linux Mint 19 on Dell XPS 15 9570 (2018)"
 date: 2018-07-25 19:37:00 +0200
 ---
-**This page has been updated on 4th of October 2019**<br />
+**This page has been updated on 6th of January 2020 regarding Linux Mint 19.3 Tricia**<br />
 *I try to keep this page up to date, so it should work with the latest version of Linux Mint incl. updates. If you notice that something is not working well, don't hesitate to [contact me](http://www.snej.de/about/).*
 
 ---
@@ -15,6 +15,8 @@ In July 2018, I bought a Dell XPS 15 9570 (2018) with the following specs:
 - Windows 10 Pro
 
 The following steps are my personal notes for setting up Linux Mint on the notebook. I also describe how to set up a dual boot system allowing to select between Linux Mint and the preinstalled Windows 10 operating system. I had this set up on my notebook for around half a year. Then I noticed, that I actually don't use Windows 10 at all and so I moved over to install Linux Mint only. However, some people might find it helpful to have a dual boot system, so I keep my notes about that here, too.
+
+*I also started a hackintosh page for this notebook. It describes a triple boot setup with Windows 10, Linux and macOS Mojave. It's still in progress but you can access the draft here: [Triple Boot Hackintosh (Windows, Linux & macOS) Dell XPS 15 9570](http://snej.de/inprogress/hackintosh/)* 
 
 
 # 1 Prerequisites
@@ -83,21 +85,29 @@ Continue in both cases:
 # 3 Let's tune it
 
 ## 3.1 First boot after the installation
+*This seems to be obsolete with Linux Mint 19.3 Tricia*
+
 Now, when booting, the grub boot loader shows up automatically and offers you to boot Linux Mint (or Windows if you kept it). The first time I booted Linux Mint after the installation didn't work well. I fixed this by:
 - Waiting for grub to show up after powering on the notebook
 - Select "Advanced", then the one saying "(recovery mode)"
 - Select "Resume Normal Boot" (might be necessary multiple times)
 
-## 3.2 Install GFX driver 
+## 3.2 Install GFX driver
+*Linux Mint 19.3 Tricia recommends this automatically*
+
 - Run the driver manager in Linux Mint
 - Install nvidia driver as recommended by the Driver Manager
 - Reboot
 
 ## 3.3 Install Updates
+*Linux Mint 19.3 Tricia recommends this automatically*
+
 - Run the Update Manager, click "refresh" and install the updates.
 - Repeat the previous step until there are no more updates to install.
 
 ## 3.4 Install a new Kernel
+*Linux Mint 19.3 Tricia comes with Kernel >= 5.0.0, so this step is obsolete*
+
 A new Kernel may severely improve your laptop's behavior when it comes to shutting down, hibernation, system freezes, etc. *Thank you for reporting that this, Michael!*
 - Run the Uppdate Manager
 - Within the Update Manager, go the menu "View" -> "Linux Kernels", **read the Warning** and click on "Continue"
