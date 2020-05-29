@@ -6,7 +6,7 @@ Hello, World! This is the source code of my personal homepage.
 
 Stuff I'm planning to add next:
 - ~~Hall of Syntax~~
-- triple boot hackintosh
+- ~~triple boot hackintosh~~
 
 
 Idea pool:
