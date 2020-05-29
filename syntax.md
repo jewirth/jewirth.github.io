@@ -275,8 +275,12 @@ The snippets below show how to use redirections and piping:
 
     # replace string "auss" with "inn"
     sed s/auss/inn/g test.txt
+    
     # same as above plus overwrite file with result and store backup with extension ".backup"
     sed -i .backup s/auss/inn/g test.txt
+    
+    # replace string in all files, recursively
+    find . -type f -exec sed -i 's/foo/bar/g' {} +
 
 <a name="2"></a>
 
