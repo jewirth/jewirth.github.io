@@ -30,7 +30,8 @@ Hall of Syntax:
   - <a href="#256">cut video file</a>
 3. <a href="#3">syntax mess</a>
 4. <a href="#4">git stuff</a>
-5. <a href="#5">synology</a>
+5. <a href="#5">synology stuff</a>
+6. <a href="#6">vim stuff</a>
 
 <a name="1"></a>
 
@@ -561,6 +562,12 @@ All squash examples below will squash the last 5 commits
                                      # then call git commit --amend && git rebase --continue
                                      # ...until all commits have been amended
 
+## Checkout master from origin
+    git checkout -B master origin/master
+    
+## Pull without auto-merge
+    git pull --rebase
+
 
 <a name="5"></a>
 
@@ -570,24 +577,39 @@ All squash examples below will squash the last 5 commits
 
 It's not enough to copy your key to the ```authorized_keys``` file. Therefore:
 
-	# avoid indexing of your data
-	Control Pangel -> Indexing Service -> Media Indexing -> Indexed Folder -> remove all folders
-	Note: Data in your ~/Drive folder will still be index... just don't use the ~/Drive folder :-)
+    # avoid indexing of your data
+    Control Pangel -> Indexing Service -> Media Indexing -> Indexed Folder -> remove all folders
+    Note: Data in your ~/Drive folder will still be index... just don't use the ~/Drive folder :-)
 
-	# enable ssh and rsync
-	Control Panel -> Terminal & SNMP -> Terminal -> Enable SSH servie
-	Control Panel -> File Services -> FTP -> Enable SFTP servie
-	Control Panel -> File Services -> rsync -> Enable rsync service
-	chmod 700 ~/.ssh
-	chmod 600 ~/.ssh/authorized_keys
-	chmod 755 /volume1/homes/$USERNAME
+    # enable ssh and rsync
+    Control Panel -> Terminal & SNMP -> Terminal -> Enable SSH servie
+    Control Panel -> File Services -> FTP -> Enable SFTP servie
+    Control Panel -> File Services -> rsync -> Enable rsync service
+    chmod 700 ~/.ssh
+    chmod 600 ~/.ssh/authorized_keys
+    chmod 755 /volume1/homes/$USERNAME
 
-	# add this line in /etc/sshd/sshd_config:
-	RSAAuthentication yes
+    # add this line in /etc/sshd/sshd_config:
+    RSAAuthentication yes
 
-	# uncomment this line in /etc/sshd/sshd_config:
-	PubkeyAuthentication yes
+    # uncomment this line in /etc/sshd/sshd_config:
+    PubkeyAuthentication yes
 
-	# restart
-	sudo synoservicectl --reload sshd
+    # restart
+    sudo synoservicectl --reload sshd
+
+
+<a name="6"></a>
+
+# vim stuff
+
+    # delete until a certain line
+    :d167G         delete until line 167
+	
+    # search (%=all lines; g=all occurenves in each line)
+    :%s/foo/bar/g  
+	
+    # column mode
+    CTRL+SHIFT+V   y,d,…   SHIFT+i to insert text
+
 
