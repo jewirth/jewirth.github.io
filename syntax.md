@@ -571,6 +571,9 @@ All squash examples below will squash the last 5 commits
     
 ## Pull without auto-merge
     git pull --rebase
+    
+## Stage hunks interactively
+    git add -p <filename>
 
 
 <a name="5"></a>
