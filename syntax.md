@@ -574,6 +574,10 @@ All squash examples below will squash the last 5 commits
     
 ## Stage hunks interactively
     git add -p <filename>
+    
+## delete remote tags & branches
+    git push --delete origin v1.0       # deletes the a branch or tag named "v1.0"
+    git push origin :refs/tags/v1.0     # explicitly delete a tag (no confusion with branches)
 
 
 <a name="5"></a>
