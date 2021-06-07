@@ -579,6 +579,8 @@ All squash examples below will squash the last 5 commits
     git push --delete origin v1.0       # deletes the a branch or tag named "v1.0"
     git push origin :refs/tags/v1.0     # explicitly delete a tag (no confusion with branches)
 
+## change timestamp of last commit
+    newdate="Tue 30 Mar 2021 12:34:56 GMT"; GIT_COMMITTER_DATE=$foosky git commit --amend --no-edit --date "$newdate"
 
 <a name="5"></a>
 
