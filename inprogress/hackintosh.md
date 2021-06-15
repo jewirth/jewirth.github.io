@@ -20,10 +20,10 @@ In my previous post, I explained how to install Linux Mint on the Dell XPS 9570 
 # Install Windows 10
 I removed Windows 10 and used my xps 9570 with Linux Mint only in the past months. That's why this part explaings how to restore Windows 10 from the disk dump that I created before using my laptop. Of course, you did that too, right? I recommended so in my last post!
 
-- bzcat nvme0n1_first_100M.bz2 | sudo dd of=/dev/nvme0n1 bs=1G
-- bzcat nvme0n1p1.bz2 | sudo dd of=/dev/nvme0n1p1 bs=1G
-- bzcat nvme0n1p2.bz2 | sudo dd of=/dev/nvme0n1p2 bs=1G
-- bzcat nvme0n1p3.bz2 | sudo dd of=/dev/nvme0n1p3 bs=1G
+- `bzcat nvme0n1_first_100M.bz2 | sudo dd of=/dev/nvme0n1 bs=1G`
+- `bzcat nvme0n1p1.bz2 | sudo dd of=/dev/nvme0n1p1 bs=1G`
+- `bzcat nvme0n1p2.bz2 | sudo dd of=/dev/nvme0n1p2 bs=1G`
+- `bzcat nvme0n1p3.bz2 | sudo dd of=/dev/nvme0n1p3 bs=1G`
 
 I skipped nvme0n1p[4-6] because these are recovery partitions and we just used our own recory images.
 
