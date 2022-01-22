@@ -281,6 +281,10 @@ The snippets below show how to use redirections and piping:
     
     # replace string in all files, recursively
     find . -type f -exec sed -i 's/foo/bar/g' {} +
+    
+    # archive all files and folders beginning with a dot
+    tar cvf archive.tar .[^.]*
+    
 
 <a name="2"></a>
 
