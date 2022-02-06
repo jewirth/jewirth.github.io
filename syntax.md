@@ -532,6 +532,16 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
 
     "The book promotes a clean, side-effect-free style of programming for the first eight chapters. Chapter 9 discusses i/o."
     
+    # git diff of a certain file between head and a certain tag
+    git diff HEAD COOL_TAG -- path/to/file.c
+    
+    # decrypt encrypted PDFs
+    qpdf --password=12345 --decrypt pdf-mit-pw.pdf pdf-ohne-pw.pdf
+    find . -iname "*.pdf" | xargs -t -I {} echo qpdf --password=12345 --decrypt {} {}-decrypted.pdf
+
+    # find all files named *.bin and zip them
+    find . -iname "*.bin" | xargs -t -I {} 7z a -- {}.zip {}
+    
 
 <a name="4"></a>
 
