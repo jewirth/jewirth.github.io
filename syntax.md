@@ -545,6 +545,16 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
     # find all files named *.bin and zip them
     find . -iname "*.bin" | xargs -t -I {} 7z a -- {}.zip {}
     
+    # rotate video
+    ffmpeg -i in.mov -vf "transpose=1" out.mov
+      0 = 90CounterCLockwise and Vertical Flip (default)
+      1 = 90Clockwise
+      2 = 90CounterClockwise
+      3 = 90Clockwise and Vertical Flip
+      Use -vf "transpose=2,transpose=2" for 180 degrees.
+      copy the audio without touching it, by using -c:a copy
+
+
 
 <a name="4"></a>
 
