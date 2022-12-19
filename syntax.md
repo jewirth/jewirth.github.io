@@ -238,6 +238,13 @@ The snippets below show how to use redirections and piping:
       read val
     done
     
+    # parse file line by line and do action for each line
+    while read -r line; do COMMAND $line; done < x.txt
+    
+    # Example for above: Open each line as URL with Firefox on macOS
+    while read -r line; do Open /Applications/Firefox.app/ -u "$line"; done < x.txt
+
+    
 <a name="16"></a>
 
 ## using functions in bash:
