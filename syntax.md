@@ -447,6 +447,10 @@ kill or enable the OS X dashboard
 Here you'll see a mess of syntax snippets that I found useful at some point in my life. Since this category is called 'mess' there is no particular order or useful description. Continue reading at your own risk!
 
 
+    # python - debug step by step, beginning from certain location in code
+    import pdb
+    pdb.set_trace()
+    
     gsettings set org.gnome.shell.extensions.ding show-trash false
     gsettings set org.gnome.shell.extensions.ding show-home false
 
