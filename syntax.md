@@ -569,6 +569,12 @@ Here you'll see a mess of syntax snippets that I found useful at some point in m
       Use -vf "transpose=2,transpose=2" for 180 degrees.
       copy the audio without touching it, by using -c:a copy
 
+    # stop macbook from sleeping
+        # disable sleep
+        sudo pmset -b sleep 0; sudo pmset -b disablesleep 1
+	
+        # re-enable sleep
+        sudo pmset -b sleep 5; sudo pmset -b disablesleep 0
 
 
 <a name="4"></a>
