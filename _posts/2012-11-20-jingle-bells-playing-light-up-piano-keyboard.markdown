@@ -148,5 +148,5 @@ You may wonder where the relay is gone. I only had a 250V relay in my tinkering 
 Here is a video of the tree in action. Unfortunately, in the video it is quite hard to see that the LED illuminates one key instead of all keys nearby. This looks better in real.
 
 <div style="text-align: center;">
-<iframe allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/cH0xqlzUgd0" width="480"></iframe>
+<iframe referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" frameborder="0" height="270" src="http://www.youtube.com/embed/cH0xqlzUgd0" width="480"></iframe>
 </div>
